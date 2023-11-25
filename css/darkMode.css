@@ -1,0 +1,41 @@
+
+:root:has(.modeIcons input:checked){
+    --black-color: white;
+    --half-opacity-black: rgba(0, 0, 0, 0.5);
+    --light-color: #252525;
+    --maroon-color: #f1b258;
+    --red-color: #fbce8f;
+    --chefsIconsBackground:#ffffff4d;
+    --white-color: #161616;
+    --light-gray: rgb(137, 136, 136);
+    --soft-gray: #cecbcb;
+    --section-color: #202020;
+}
+
+body:has(.modeIcons input:checked) .modeIcons .light{
+    display: block;
+}
+
+body:has(.modeIcons input:checked) .modeIcons .dark{
+    display: none;
+}
+
+body:has(.modeIcons input:not(:checked)) .modeIcons .light{
+    display: none;
+}
+
+body:has(.modeIcons  input:not(:checked)) .modeIcons .dark{
+    display: block;
+}
+
+body:has(.modeIcons input:checked) .chefImg::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-image: url(../media/team-shape-dark.svg);
+    background-repeat: repeat-x;
+  }
+  

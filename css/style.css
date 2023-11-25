@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", system-ui, "Segoe UI", "Helvetica Neue", Arial,
+    "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  color: var(--black-color);
+}
+body{
+  background-color: var(--white-color);
+}
+:root {
+  --primary-font: "Amatic SC", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+  --black-color: black;
+  --half-opacity-black: rgba(0, 0, 0, 0.5);
+  --light-color: #eeeeee;
+  --maroon-color: #ce1212;
+  --red-color: red;
+  --chefsIconsBackground:#ffffff4d;
+  --white-color: white;
+  --light-gray: #666666;
+  --soft-gray: #cecbcb;
+ --section-color: #ffffff;
+}
+ul {
+  list-style: none;
+}
+a{
+ color: var(--black-color);
+  text-decoration: none;
+}
+
+/* Navbar */
+nav{
+  background-color: var(--white-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000000;
+}
+nav h2 a{
+  font-family: var(--secondary-font);
+  color: var(--black-color);
+  font-size: 2rem;
+  font-weight:800;
+}
+nav a{
+  color: var(--light-gray);
+  padding-bottom: 0.3rem;
+  transition: 0.2s;
+}
+/* Case of hover on any navbar link */
+nav ul .hov:hover,
+/* active navbar link */
+body:has(.home:target) .homeLink,
+body:has(.chefs:target) .chefsLink,
+body:has(.gallary-section:target) .galleryLink,
+body:has(.contactUs:target) .contactLink,
+/* Opening the page for the first time and didn't click any link yet */
+body:not(:has(:target)) .homeLink {
+  color: var(--black-color);
+  border-bottom: 3px var(--maroon-color) solid;
+}
+.navLink li a{
+  font-size: 1.3rem;
+}
+nav ul{
+  align-items: center;
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.5s;
+}
+.barsIcon{
+  display: none;
+}
+nav .closeIcn{
+  display: none;
+  width: 100%;
+  text-align: right;
+}
+body:has(.navLink:target) nav{
+  height: 100vh !important;
+  background-color: #fff9;
+}
+
+.navLink:target{
+  transform: translateX(0);
+}
+@media (max-width: 1200px){
+  .barsIcon{
+    display: block;
+  }
+  nav .closeIcn{
+    display: block;
+  }
+  nav ul{
+    transform: translateX(100%);
+    position: absolute;
+    flex-direction: column;
+    top:0;
+    right:0;
+    background-color: white;
+    padding: 50px;
+    align-items: start;
+    width: 35%;
+    height: 100%;
+    gap: 0;
+  }
+  nav ul li{
+    padding-block: 20px;
+  }
+  .modeIcons{
+    margin-left: auto;
+  }
+}
+
+
+/* Home */
+.home h1 {
+  font-family: var(--primary-font);
+}
+.sectionColor {
+  background-color: var( --light-color) ;
+}
+.homeContent p{
+  color: var(--light-gray);
+}
+.firstBtn {
+  background-color: var(--maroon-color);
+  border-radius: 0px 100vh 100vh;
+  padding: 10px 18px;
+  color: var(--white-color);
+}
+.firstBtn:hover {
+  background-color: var(--red-color);
+}
+.icn {
+  background-image: linear-gradient(
+    to right,
+    var(--maroon-color) 0% 50%,
+    transparent 50% 100%
+  );
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+.icn i {
+  z-index: 10;
+}
+.video-btn{
+  color: var(--black-color);
+}
+.icn::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border-radius: inherit;
+  background-color: var(--white-color);
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(1deg);
+  }
+}
+.home .homeImg:hover {
+  animation: shake 0.7s;
+  animation-iteration-count: infinite;
+}
+.navBarIcons i:last-child{
+  display: none;
+} 
+.modeIcons i:hover{
+  cursor: pointer;
+}
+.homeContent, .homeImg{
+  width: 45%;
+}
+@media (max-width: 992px) {
+  .navBarIcons i:last-child{
+    display: inline-block;
+  } 
+  .homeImg{
+    width: 100%;
+    order:1;
+  }
+  .homeContent{
+    width: 85%;
+    order:2;
+  }
+}
+
+/* 
+Chefs Section */
+.chefs{
+  background-color: var(--section-color);
+}
+.muted{
+  color: var(--light-gray);
+}
+h2,
+h2 span {
+  font-family: var(--primary-font);
+}
+h2 span {
+  color: var(--maroon-color);
+}
+.shape {
+  z-index: 20;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+.socialIcons {
+  right: -40px;
+  top: 20px;
+  transition: 0.25s;
+  background-color: var(--chefsIconsBackground);
+  opacity: 0;
+}
+.chefs-section {
+  overflow: hidden;
+  --gap: 30px;
+  gap: var(--gap);
+}
+.chefs-section .innerDiv {
+  transition: 0.5s;
+  background-color: var(--white-color);
+  width: calc(calc(100% - var(--gap) * 2) / 3);
+}
+@media (max-width: 992px){
+  .chefs-section .innerDiv{
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+  }
+}
+@media (max-width: 764px){
+  .chefs-section .innerDiv{
+    width: calc(100% - var(--gap) * 2);
+  }
+}
+.chefs-section .innerDiv:hover {
+  scale: 1.06;
+}
+.chefs-section .innerDiv:hover .socialIcons {
+  right: 20px;
+  opacity: 1;
+  transition: 1s;
+}
+.socialIcons ul li i {
+  color: var(--light-gray);
+  transition: 0.5s;
+}
+.socialIcons ul li i:hover {
+  color: black;
+}
+.chefImg::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-image: url(../media/team-shape.svg);
+  background-repeat: repeat-x;
+}
+
+
+/* Gallary Section */
+.layer{
+  background-color: var(--half-opacity-black);
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+.layer p{
+  color: var(--soft-gray);
+}
+.layer h3{
+  color: white;
+}
+.gallaryImg:hover .layer{
+  top: 0;
+}
+.gallaryImg img{
+  transition: 0.5s;
+}
+.gallaryImg:hover img{
+  scale: 1.2;
+}
+.gallarySections{
+  --gap: 1rem;
+  gap: var(--gap);
+  height: 75rem;
+}
+@media (max-width: 992px){
+  .gallarySections{
+    height: 90rem;
+  }
+  .pizza{
+    order: 1;
+  }
+  .pizzaSlice{
+    order: 3;
+  }
+  .meat{
+    order: 5;
+  }
+  .backery{
+    order: 4;
+  }
+  .burger{
+    order: 2;
+  }
+  .friedChicken{
+    order: 6;
+  }
+  .kofta{
+    order: 7;
+  }
+}
+@media (max-width: 764px){
+  .gallarySections{
+    height: 240rem;
+  }
+}
+
+/* Contact us */
+.contactUs{
+  background-color: var(--section-color);
+}
+.circle{
+  background-color: var(--maroon-color);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.contactInfos{
+  --gap: 20px;
+  gap:  var(--gap);
+}
+.contactInfos .contactInfo{
+  background-color: var(--light-color);
+  width: calc(calc(100% - var(--gap)) / 2);
+}
+.contactInfo .content span{
+  color: var(--light-gray);
+}
+textarea{
+  resize: vertical;
+  min-height: 200px;
+  max-height: 300px;
+}
+.contactUs form :is(input, textarea){
+  border: 2px solid var(--light-color);
+  transition: 0.5s;
+}
+.contactUs form input:first-child,.contactUs form input:nth-child(2){
+  width: 50%;
+}
+@media (max-width: 992px){
+  .contactUs form input:first-child,.contactUs form input:nth-child(2){
+    width: 100%;
+  }
+  .contactInfos .contactInfo{
+    width: 100%;
+  }
+}
+.contactUs form :is(input, textarea):focus{
+  outline:  none;
+  border-color: var(--maroon-color);
+}
+form .btn, footer .btn{
+  background-color: var(--maroon-color);
+  border-radius: 100vh;
+  transition: 0.5s;
+  color: var(--white-color);
+}
+form input:focus{
+  outline: none;
+}
+form .btn:hover, footer .btn:hover{
+  background-color: var(--red-color);
+}
+.circle i{
+  color: var(--white-color);
+}
+
+/* Footer Section */
+footer
+{
+  background-color: var(--light-gray);
+}
+footer .line{
+  width: 100%;
+  height: 2px;
+  background-color: var(--soft-gray);
+}
+.quick-links ul li{
+  transition: 0.5s;
+}
+.quick-links ul li:hover{
+  background-color: var(--soft-gray);
+  padding-left: 15px;
+}
+.footerSection a, .whitecolor{
+  color: white;
+}
+footer .btn{
+  border-radius: 0;
+  border: 2px solid var(--maroon-color)
+}
+footer li i{
+  color: var(--maroon-color);
+}
+.emailBar i{
+  color: var(--white-color);
+}

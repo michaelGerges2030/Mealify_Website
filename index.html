@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title with it's icon -->
+    <title>Mealify</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.png" />
+    <!-- The Website Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- The bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!-- The Font Awesone Icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+        <!-- Dark Mode Style Sheet -->
+    <link rel="stylesheet" href="css/darkMode.css" />
+  </head>
+  <body>
+    
+    <!-- navbar -->
+    <nav class="shadow py-4">
+      <div class="container px-5">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+          <h2>
+            <a href="index.html">Mealify</a></h2>
+          <ul
+            class="navLink pt-3" id="navLink"
+          >
+          <li class="closeIcn"><a href="#home">
+            <i class="fa-solid fa-xmark fa-lg" style="color: #000000;"></i>
+          </a></li>
+            <li><a href="#home" class="hov homeLink">Home</a></li>
+            <li><a href="#chefs" class="hov chefsLink">Chefs</a></li>
+            <li><a href="#gallary" class="hov galleryLink">Gallery</a></li>
+            <li><a href="#contact" class="hov contactLink">Contact</a></li>
+          </ul>
+          <div class="modeIcons d-flex align-items-center">
+            <label for="mode">
+              <i class="fa-regular fa-sun fa-xl pe-4 light"></i>
+            </label>
+            <label for="mode">
+              <i class="fa-solid fa-moon fa-xl pe-4 dark"></i>
+            </label>
+            <input type="checkbox" id="mode" hidden aria-hidden>
+          </div>
+          <a href="#navLink" class="barsIcon">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section-->
+    <div id="home" class="home p-5 sectionColor">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-center py-5 mt-5"
+      >
+        <div class="homeContent pt-5">
+          <h1 class="display-1">
+            Enjoy Your Healthy
+            Delicious Food
+          </h1>
+          <p class="py-3">
+            Sed autem laudantium dolores. Voluptatem itaque ea<br />
+            consequatur eveniet. Eum quas beatae cumque eum<br />
+            quaerat.
+          </p>
+          <div class="homeBtns d-flex flex-wrap align-items-center">
+            <a
+              class="btn firstBtn col-sm-12 col-md-4"
+              href="#contact-section"
+              target="_self"
+              >Book A Table</a
+            >
+            <a
+              class="btn video-btn fw-bold d-flex align-items-center justify-content-center col-sm-12 col-md-6"
+              target="_blank"
+              href="https://www.youtube.com/"
+            >
+              <div class="icn d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-play fa-sm"></i>
+              </div>
+              Watch A Video
+            </a>
+          </div>
+        </div>
+        <div class="homeImg ms-auto">
+          <img src="media/hero-img.png" class="w-100" />
+        </div>
+      </div>
+    </div>
+
+    <!-- chefs Section-->
+    <section id="chefs" class="chefs py-5">
+      <div class="title text-center py-3">
+        <span class="muted">Chefs</span>
+        <h2 class="d-flex justify-content-center align-items-center display-3">
+          Our<span class="display-3"> Proffesional </span> Chefs
+        </h2>
+      </div>
+      <div
+        class="container chefs-section d-flex flex-wrap justify-content-center align-items-center py-5"
+      >
+        <div
+          class="innerDiv position-relative shadow rounded"
+        >
+          <div class="chefImg position-relative">
+            <img
+              src="media/chefs-1.jpg"
+              alt="smile, chef"
+              class="w-100 rounded"
+            />
+          </div>
+          <div class="chefContent text-center p-3">
+            <h5 class="fw-bold">Walter White</h5>
+            <span class="muted small">Master Chef</span>
+            <p class="muted pt-2 fst-italic">
+              Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
+              tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
+              corporis et voluptate
+            </p>
+          </div>
+          <div class="socialIcons position-absolute rounded text-center">
+            <ul class="list-group px-3 py-2">
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-twitter py-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-facebook-f pb-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-instagram pb-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-linkedin pb-3"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="innerDiv position-relative shadow rounded"
+        >
+          <div class="chefImg position-relative">
+            <img
+              src="media/chefs-2.jpg"
+              alt="smile, chef"
+              class="w-100 rounded"
+            />
+          </div>
+          <div class="chefContent text-center p-3">
+            <h5 class="fw-bold">Sarah Jhonson</h5>
+            <span class="muted small">Patissier</span>
+            <p class="muted pt-2 fst-italic">
+              Quo esse repellendus quia id. Est eum et accusantium pariatur
+              fugit nihil minima suscipit corporis. Voluptate sed quas
+              reiciendis animi neque sapiente.
+            </p>
+          </div>
+          <div class="socialIcons position-absolute rounded text-center">
+            <ul class="list-group px-3 py-2">
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-twitter py-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-facebook-f pb-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-instagram pb-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-linkedin pb-3"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="innerDiv position-relative shadow rounded"
+        >
+          <div class="chefImg position-relative">
+            <img
+              src="media/chefs-3.jpg"
+              alt="smile, chef"
+              class="w-100 rounded"
+            />
+          </div>
+          <div class="chefContent text-center p-3">
+            <h5 class="fw-bold">William Anderson</h5>
+            <span class="muted small">Cook</span>
+            <p class="muted pt-2 fst-italic">
+              Vero omnis enim consequatur. Voluptas consectetur unde qui
+              molestiae deserunt. Voluptates enim aut architecto porro
+              aspernatur molestiae modi.
+            </p>
+          </div>
+          <div class="socialIcons position-absolute rounded text-center">
+            <ul class="list-group px-3 py-2">
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-twitter py-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-facebook-f pb-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-instagram pb-3"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-linkedin pb-3"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallary Section -->
+    <section id="gallary" class="gallary-section sectionColor py-5">
+      <div class="title text-center py-3">
+        <span class="muted">GALLERY</span>
+        <h2 class="d-flex justify-content-center align-items-center display-3">
+          Check<span class="display-3"> Our Gallery</span>
+        </h2>
+      </div>
+      <div class="gallarySections container d-flex flex-wrap flex-column">
+            <div class="gallaryImg position-relative overflow-hidden pizza col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-1.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Pizza</h3>
+                    <p>Hawaiian pizza with ham and pineapple</p>
+                  </div>
+                </div>
+              </div>              <div class="gallaryImg position-relative overflow-hidden pizzaSlice col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-4.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Levitation pizza</h3>
+                    <p>Levitation pizza on black background.</p>
+                  </div>
+                </div>
+              </div>
+            <div class="gallaryImg position-relative overflow-hidden meat col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-2.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Beef steaks</h3>
+                    <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gallaryImg position-relative overflow-hidden backery col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-7.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Frittata</h3>
+                    <p>Frittata or potato pie in a ceramic plate</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gallaryImg position-relative overflow-hidden burger col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-3.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Burger</h3>
+                    <p>grass fed bison hamburger with chips & beer</p>
+                  </div>
+                </div>
+              </div>
+            <div class="gallaryImg position-relative overflow-hidden friedChicken col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-5.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gallaryImg position-relative overflow-hidden kofta col-sm-12 col-md-6 col-lg-4">
+                <img src="media/meal-6.jpg" alt="Cheese pizza" class="w-100"/>
+                <div class="layer position-absolute w-100 h-100 d-flex justify-content-center align-items-center text-center">
+                  <div class="p-3">
+                    <h3>Lyulya kebab</h3>
+                    <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and herbs</p>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contactUs py-5">
+        <div class="title text-center py-3">
+            <span class="muted">Contact</span>
+            <h2 class="d-flex justify-content-center align-items-center display-3">
+                Need Help ? <span class="display-3"> Contact Us</span>
+            </h2>
+          </div>
+          <div class="container m-auto">
+            <div class="map col-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58919.44357194014!2d-74.07529210981286!3d40.6934614597985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1700245373928!5m2!1sen!2seg" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+            </div>
+          <div class="contactInfos py-4 d-flex flex-wrap justify-content-between align-items-center">
+            <div class="contactInfo d-flex align-items-center p-3">
+                <div class="circle d-flex justify-content-center align-items-center mx-3">
+                    <i class="fa-regular fa-map fa-lg"></i>
+                </div>
+                <div class="content">
+                    <span class="fs-5 fw-bold">Our Address</span>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                </div>
+              </div>
+              <div class="contactInfo d-flex align-items-center p-3">
+                <div class="circle d-flex justify-content-center align-items-center mx-3">
+                    <i class="fa-regular fa-envelope fa-lg"></i>
+                </div>
+                <div class="content">
+                    <span class="fs-5 fw-bold">Email Us</span>
+                    <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+                </div>
+              </div>
+              <div class="contactInfo d-flex align-items-center p-3">
+                <div class="circle d-flex justify-content-center align-items-center mx-3">
+                    <i class="fa-solid fa-phone fa-lg"></i>
+                </div>
+                <div class="content">
+                    <span class="fs-5 fw-bold">Call Us</span>
+                   <p><a href="tel:+1 5589 55488 55">+1 5589 55488 55</a></p>
+                </div>
+              </div>
+              <div class="contactInfo d-flex align-items-center p-3">
+                <div class="circle d-flex justify-content-center align-items-center mx-3">
+                    <i class="fa-solid fa-share-nodes fa-lg"></i>
+                </div>
+                <div class="content">
+                    <span class="fs-5 fw-bold">Openeing Hours</span>
+                    <p><strong>Mon-Sat: </strong> 11AM - 23PM; <strong>Sunday : </strong> Closed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <form class="container py-3 shadow text-center">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <input
+                type="text"
+                class="rounded p-2 mb-3"
+                name="Name"
+                placeholder="Your Name"
+              />
+              <input
+                type="email"
+                class="rounded p-2 mb-3"
+                name="email"
+                placeholder="Your Email"
+              />
+            </div>
+          <input
+            type="text"
+            class="rounded p-2 w-100 mb-3"
+            name="subject"
+            placeholder="Subject"
+          />
+          <textarea name="Message Box" id="message" placeholder="Message"  class="w-100 mb-3 rounded p-2"></textarea>
+          <button class="btn my-3 py-2 px-5">Send Message</button>
+        </form>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer id="footer" class="text-white p-5">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <div class="footerSection col-sm-12 col-md-4 col-lg-3 pt-5">
+            <div class="d-flex align-items-center">
+                <div class="col-2 px-0 mx-0">
+                    <img src="media/favicon.png" alt="knife fork, dish,heart" class="w-75"/>
+                </div>
+              <div class="px-0 mx-0">
+                <h4 class="whitecolor fw-bold">Menlify</h4>
+              </div>
+            </div>
+            <p class="whitecolor py-2">
+                Mealify is a restaurant landing page that
+                offers a delicious dining experience to its
+                customers.
+              </p>
+              <h4 class="whitecolor text-center">Social Media</h4>
+              <div class="line my-3"></div>
+              <div class="d-flex justify-content-evenly align-items-center py-3">
+                <i class="fa-brands fa-twitter fa-xl whitecolor"></i>
+                <i class="fa-brands fa-facebook-f fa-xl whitecolor"></i>
+                <i class="fa-brands fa-instagram fa-xl whitecolor"></i>
+                <i class="fa-brands fa-linkedin fa-xl whitecolor"></i>
+              </div>
+        </div>
+
+        <div class="footerSection col-sm-12 col-md-8 col-lg-6 px-4 pt-5">
+        <h5 class="whitecolor fw-bold">Subscribe our Newsletter</h5>
+        <p class="whitecolor pt-2">
+          Don't miss out on our latest menu updates and exclusive offers - join
+          our newslettertoday and stay up-to-date with all things Mealify!
+        </p>
+        <div class="emailBar d-flex flex-wrap align-items-center py-2">
+          <input
+            type="text"
+            placeholder="Enter Your Email Address"
+            class="inpt col-sm-12 col-md-10 col-lg-8 py-2 px-2 my-3"
+          />
+          <button class="btn col-sm-6 col-lg-4 py-2 d-flex align-items-center justify-content-center" type="submit">
+            <i class="fa-solid fa-envelope px-1"></i>
+            subscribe
+          </button>
+        </div>
+        <div class="quick-links">
+          <h5 class="whitecolor fw-bold">Quick Links</h5>
+          <div class="d-flex justify-content-between col-10">
+            <ul class="list-group ps-2 w-100">
+                <li class="whitecolor"><i class="fa-solid fa-chevron-right fa-sm pe-2 pb-3"></i>Menu</li>
+                <li class="whitecolor"><i class="fa-solid fa-chevron-right fa-sm pe-2 pb-3"></i>About Us</li>
+                <li class="whitecolor"><i class="fa-solid fa-chevron-right fa-sm pe-2 pb-3"></i>Testimonial</li>
+              </ul>
+            <ul class="list-group ps-2 w-100">
+                <li class="whitecolor"><i class="fa-solid fa-chevron-right fa-sm pe-2 pb-3"></i>Promo</li>
+                <li class="whitecolor"><i class="fa-solid fa-chevron-right fa-sm pe-2 pb-3"></i>Contact</li>
+                <li class="whitecolor"><i class="fa-solid fa-chevron-right fa-sm pe-2 pb-3"></i>Our Partners</li>
+            </ul>
+          </div>    
+        </div>
+      </div>
+
+      <div class="footerSection col-sm-12 col-md-8 col-lg-3 px-4 pt-5">
+        <h5 class="whitecolor fw-bold">Get in Touch</h5>
+        <ul class="list-group">
+          <li class="whitecolor py-3">
+            <i class="fa-solid fa-location-dot fa-lg pe-2"></i>A108
+            Adam Street, New York, NY 535022
+          </li>
+          <li class="pb-3">
+            <i class="fa-solid fa-envelope fa-lg pe-2"></i
+            ><a href="mailto:contact@example.com">contact@example.com</a>
+          </li>
+          <li class="pb-3">
+            <i class="fa-solid fa-phone fa-lg pe-2"></i><a href="tel:+15589
+            55488 55">+1 5589
+            55488 55</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>
